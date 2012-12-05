@@ -14,7 +14,6 @@ set nofsync
 set swapsync=
 
 
-
 " Key Mapping
 " Directory Browser - NERD Tree plugin
 map <F10> :NERDTreeToggle<CR>
@@ -78,3 +77,30 @@ set guioptions+=a
 
 " Working Directory
 set autochdir
+
+" Vim completion
+" Complete options (disable preview scratch window)
+set completeopt=menu,menuone,longest
+" Limit popup menu height
+set pumheight=15
+ 
+" PLUGIN CONFIGURATION
+"
+" ACK - Open quickfix window at the top of the window
+" instead of the bottom
+let g:ack_qhandler="topleft copen"
+let g:ack_lhandler="topleft lopen"
+
+" TAGBAR - Key for opening/closing the tagbar window
+nnoremap <silent> <F9> :TagbarToggle<CR>
+let g:tagbar_width=60
+
+" Clang_Complete
+" Disable auto popup, use <Tab> to autocomplete
+let g:clang_complete_auto = 0
+" Show clang errors in the quickfix window
+let g:clang_complete_copen = 1
+
+" SuperTab
+" Option for context aware completion
+ let g:SuperTabDefaultCompletionType = "context"

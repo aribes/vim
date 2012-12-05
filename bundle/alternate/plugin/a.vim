@@ -81,7 +81,7 @@ call <SID>AddAlternateExtensionMapping('cpp',"h,hpp")
 call <SID>AddAlternateExtensionMapping('CPP',"H,HPP")
 call <SID>AddAlternateExtensionMapping('cc',"h")
 call <SID>AddAlternateExtensionMapping('CC',"H,h")
-call <SID>AddAlternateExtensionMapping('cxx',"h")
+call <SID>AddAlternateExtensionMapping('cxx',"h,hxx")
 call <SID>AddAlternateExtensionMapping('CXX',"H")
 " Mappings for PSL7
 call <SID>AddAlternateExtensionMapping('psl',"ph")

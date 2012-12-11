@@ -12,7 +12,7 @@ colorscheme darkblue
 " turn off fsync because it causes performance to suck on SAN for no benefit
 set nofsync
 set swapsync=
-
+set nocompatible
 
 " Key Mapping
 " Directory Browser - NERD Tree plugin
@@ -25,6 +25,8 @@ map <F12> :lcd %:h<CR>
 set pastetoggle=<F3> 
 " noremap <F3> :MBEbn<CR>
 " noremap <F2> :MBEbp<CR>
+nnoremap <space> 10jzz
+nnoremap <backspace> 10kzz
 
 " Dev configuration
 " Tibra recommandations
@@ -56,6 +58,10 @@ autocmd BufRead,BufNewFile *.log  setfiletype tiblog
 set foldmethod=syntax
 set foldlevel=99
 set foldenable
+map <silent> <F5> :set foldlevel=1<CR>
+map <silent> <F6> :set foldlevel-=1<CR>
+map <silent> <F7> :set foldlevel+=1<CR>
+map <silent> <F8> :set foldlevel=99<CR>
 "set foldcolumn=2 " Peut etre utile mais bon ca prend de la place
 
 " Tag stuff
@@ -97,10 +103,17 @@ let g:tagbar_width=60
 
 " Clang_Complete
 " Disable auto popup, use <Tab> to autocomplete
-let g:clang_complete_auto = 0
-" Show clang errors in the quickfix window
-let g:clang_complete_copen = 1
+let g:clang_complete_auto=0
+" Don't show clang errors in the quickfix window
+let g:clang_complete_copen=0
+" Use clang library
+let g:clang_use_library=1
 
 " SuperTab
 " Option for context aware completion
  let g:SuperTabDefaultCompletionType = "context"
+
+
+ " List of path
+ " In Tibra, going to .. is enough
+ set path +=..

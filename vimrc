@@ -13,6 +13,7 @@ colorscheme darkblue
 set nofsync
 set swapsync=
 set nocompatible
+set wildmenu
 
 " Key Mapping
 " Directory Browser - NERD Tree plugin
@@ -37,6 +38,10 @@ set autoindent "auto-indent code
 set autowrite
 " My recommandations :-)
 set ls=2
+ 
+" List of path
+" In Tibra, going to .. is enough
+set path +=..
 
 " additional file extensions for syntax highlighting
 syntax on
@@ -113,7 +118,6 @@ let g:clang_use_library=1
 " Option for context aware completion
  let g:SuperTabDefaultCompletionType = "context"
 
-
- " List of path
- " In Tibra, going to .. is enough
- set path +=..
+" Viki configuration
+"
+let g:vikiOpenFileWith_html  = "silent !firefox %{FILE}"

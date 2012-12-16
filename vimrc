@@ -53,8 +53,6 @@ set path +=..
 
 " additional file extensions for syntax highlighting
 syntax on
-filetype on
-filetype plugin on
 filetype plugin indent on
 
 " Specific TIBRA C++ files
@@ -62,7 +60,6 @@ au BufNewFile,BufRead *.ipp set filetype=cpp
 au BufNewFile,BufRead *.ixx set filetype=cpp
 au BufNewFile,BufRead *.tpp set filetype=cpp
 au BufNewFile,BufRead *.txx set filetype=cpp
-
 
 autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd BufRead,BufNewFile *.cmake,CMakeList*.txt runtime! indent/cmake-indent.vim

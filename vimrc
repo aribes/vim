@@ -13,9 +13,14 @@ colorscheme darkblue
 set nofsync
 set swapsync=
 set nocompatible
+set nobackup
+set noswapfile
 set wildmenu
 
 " Key Mapping
+
+" Leader Key
+let mapleader=","
 " Directory Browser - NERD Tree plugin
 map <F10> :NERDTreeToggle<CR>
 " Remove highlight search
@@ -23,9 +28,8 @@ map <F11> :nohlsearch<CR>
 " Set current directory
 map <F12> :lcd %:h<CR>
 " Paste behavior
-set pastetoggle=<F3> 
-" noremap <F3> :MBEbn<CR>
-" noremap <F2> :MBEbp<CR>
+set pastetoggle=<F3>
+" To move faster in the files
 nnoremap <space> 10jzz
 nnoremap <backspace> 10kzz
 
@@ -38,7 +42,11 @@ set autoindent "auto-indent code
 set autowrite
 " My recommandations :-)
 set ls=2
- 
+
+" A Good way to see spaces
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
+
 " List of path
 " In Tibra, going to .. is enough
 set path +=..
@@ -47,6 +55,7 @@ set path +=..
 syntax on
 filetype on
 filetype plugin on
+filetype plugin indent on
 
 " Specific TIBRA C++ files
 au BufNewFile,BufRead *.ipp set filetype=cpp
@@ -67,6 +76,8 @@ map <silent> <F5> :set foldlevel=1<CR>
 map <silent> <F6> :set foldlevel-=1<CR>
 map <silent> <F7> :set foldlevel+=1<CR>
 map <silent> <F8> :set foldlevel=99<CR>
+
+
 "set foldcolumn=2 " Peut etre utile mais bon ca prend de la place
 
 " Tag stuff
@@ -117,7 +128,3 @@ let g:clang_use_library=1
 " SuperTab
 " Option for context aware completion
  let g:SuperTabDefaultCompletionType = "context"
-
-" Viki configuration
-"
-let g:vikiOpenFileWith_html  = "silent !firefox %{FILE}"

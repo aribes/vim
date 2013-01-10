@@ -78,12 +78,8 @@ map <silent> <F8> :set foldlevel=99<CR>
 
 "set foldcolumn=2 " Peut etre utile mais bon ca prend de la place
 
-" Tag stuff
-" Clang Complete Configuration
-" let g:clang_close_preview=1
 " ctags
-" set tags=/home/andre/Dev/Tibra/event-scope-trunk/tags
-" nmap <F8> :TlistToggle<CR>
+set tags=/home/andre/Dev/Tibra/spmm-3.18.0-rml3843/tags
 
 " GUI
 set guioptions-=T
@@ -122,6 +118,8 @@ let g:clang_complete_auto=0
 let g:clang_complete_copen=0
 " Use clang library
 let g:clang_use_library=1
+" Clang Complete Configuration
+" let g:clang_close_preview=1
 
 " SuperTab
 " Option for context aware completion

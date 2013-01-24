@@ -79,12 +79,15 @@ map <silent> <F8> :set foldlevel=99<CR>
 "set foldcolumn=2 " Peut etre utile mais bon ca prend de la place
 
 " ctags
-set tags=/home/andre/Dev/Tibra/spmm-3.18.0-rml3843/tags
+set tags=/home/andre/Dev/Tibra/3.19.0-RFX-4575/tags
 
 " GUI
-set guioptions-=T
-set guifont=Monospace\ Bold
-" set guifont=Monospace\ Bold\ 16
+if has("gui_running")
+    set guioptions-=T
+    set guifont=Monospace\ Bold\ 09
+    colorscheme wombat
+    " set guifont=Monospace\ Bold\ 16
+endif
 
 " X11 Clipboard management
 " Look at -> help 'clipboard'

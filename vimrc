@@ -10,6 +10,10 @@ set ignorecase
 set number
 set background=dark
 colorscheme darkblue
+
+" Add full file path to your existing statusline
+set statusline=%F\ (%L\ lines)
+
 " turn off fsync because it causes performance to suck on SAN for no benefit
 set nofsync
 set swapsync=
@@ -36,10 +40,11 @@ nnoremap <backspace> 10kzz
 
 " Dev configuration
 " Tibra recommandations
-set expandtab
-set sw=4
-set ts=4
 set autoindent "auto-indent code
+set smartindent
+set expandtab
+set shiftwidth=4
+set tabstop=4
 set autowrite
 " My recommandations :-)
 set ls=2

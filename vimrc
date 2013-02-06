@@ -12,7 +12,7 @@ set background=dark
 colorscheme darkblue
 
 " Add full file path to your existing statusline
-set statusline=%F\ (%L\ lines)
+set statusline=%F\ (%L\ lines)\ %m 
 
 " turn off fsync because it causes performance to suck on SAN for no benefit
 set nofsync

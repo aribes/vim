@@ -67,7 +67,7 @@ au BufNewFile,BufRead *.ixx set filetype=cpp
 au BufNewFile,BufRead *.tpp set filetype=cpp
 au BufNewFile,BufRead *.txx set filetype=cpp
 
-autocmd FileType html,xhtml,xml,htmldjango,htmljinja,eruby,mako setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType html,xhtml,xml,xsd,htmldjango,htmljinja,eruby,mako setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 autocmd BufRead,BufNewFile *.cmake,CMakeList*.txt runtime! indent/cmake-indent.vim
 autocmd BufRead,BufNewFile *.log  setfiletype tiblog
 
@@ -84,7 +84,7 @@ map <silent> <F8> :set foldlevel=99<CR>
 "set foldcolumn=2 " Peut etre utile mais bon ca prend de la place
 
 " ctags
-set tags=/home/andre/Dev/Tibra/3.19.0-RFX-4575/tags
+set tags=/home/andre/Dev/Tibra/3.19.0-RFX-4635/tags
 
 " GUI
 if has("gui_running")

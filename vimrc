@@ -34,9 +34,11 @@ map <F11> :nohlsearch<CR>
 map <F12> :lcd %:h<CR>
 " Paste behavior
 set pastetoggle=<F3>
+
 " To move faster in the files
-nnoremap <space> 10jzz
-nnoremap <backspace> 10kzz
+" Origin 10jzz and 10kzz
+nnoremap <space> 10j
+nnoremap <backspace> 10k
 
 " Dev configuration
 " Tibra recommandations
@@ -48,6 +50,9 @@ set tabstop=4
 set autowrite
 " My recommandations :-)
 set ls=2
+
+" completion behaviour
+set wildmode=longest:full,full
 
 " A Good way to see spaces
 set list
@@ -104,7 +109,7 @@ set autochdir
 
 " Vim completion
 " Complete options (disable preview scratch window)
-set completeopt=menu,menuone,longest
+set completeopt=menu,preview
 " Limit popup menu height
 set pumheight=15
  
@@ -131,4 +136,10 @@ let g:clang_use_library=1
 
 " SuperTab
 " Option for context aware completion
- let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabDefaultCompletionType = "context"
+"let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+"let g:SuperTabContextDefaultCompletionType = "<c-x><c-n>"
+
+ " ConqueTerm
+ " Option to render more quickly by disabling colors
+ let g:ConqueTerm_Color = 0

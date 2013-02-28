@@ -26,6 +26,8 @@ set wildmenu
 
 " Leader Key
 let mapleader=","
+" F1 is annoying
+:nmap <F1> <nop>
 " Directory Browser - NERD Tree plugin
 map <F10> :NERDTreeToggle<CR>
 " Remove highlight search

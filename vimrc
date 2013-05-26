@@ -9,10 +9,12 @@ set hlsearch
 set ignorecase
 set number
 set background=dark
-colorscheme darkblue
+colorscheme wombat
 
 " Add full file path to your existing statusline
-set statusline=%F\ (%L\ lines)\ %m 
+" This statusline is currently not used
+" Since I use powerline
+" set statusline=%F\ (%L\ lines)\ %m 
 
 " turn off fsync because it causes performance to suck on SAN for no benefit
 set nofsync
@@ -91,12 +93,19 @@ map <silent> <F8> :set foldlevel=99<CR>
 "set foldcolumn=2 " Peut etre utile mais bon ca prend de la place
 
 " ctags
-set tags=/home/andre/Dev/Tibra/3.19.0-RFX-4635/tags
+" set tags=/home/andre/Dev/Repo/Tibra-Onigiri/tags " Onigiri
+" set tags=/home/andre/Dev/Repo/RML-4762/tags " ISE triggeredOrderHitter
+" set tags=/home/andre/Dev/Repo/Test-Bridge/tags " Decorator
+set tags=/home/andre/Dev/Repo/Tibra/tags " Decorator
 
 " GUI
 if has("gui_running")
     set guioptions-=T
-    set guifont=Monospace\ Bold\ 09
+    set guioptions-=m
+    "set guifont=Monospace\ Bold\ 09
+    "set guifont=Inconsolata\ for\ Powerline\ Bold\ 09
+    "set guifont=Source\ Code\ Pro\ for\ Powerline\ Semibold\ 09
+    set guifont=Ubuntu\ Mono\ for\ Powerline\ Bold\ 10
     colorscheme wombat
     " set guifont=Monospace\ Bold\ 16
 endif
@@ -144,4 +153,8 @@ let g:SuperTabDefaultCompletionType = "context"
 
  " ConqueTerm
  " Option to render more quickly by disabling colors
- let g:ConqueTerm_Color = 0
+let g:ConqueTerm_Color = 0
+
+set laststatus=2
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim

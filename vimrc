@@ -1,7 +1,10 @@
 " Pathogen installation
+" Pathogen is used to initialise
+" all the vim plugins
 call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
+
 
 " Global Configuration
 set mouse=a
@@ -23,9 +26,9 @@ set nocompatible
 set nobackup
 set noswapfile
 set wildmenu
+set laststatus=2
 
 " Key Mapping
-
 " Leader Key
 let mapleader=","
 " F1 is annoying
@@ -92,23 +95,18 @@ map <silent> <F8> :set foldlevel=99<CR>
 
 "set foldcolumn=2 " Peut etre utile mais bon ca prend de la place
 
-" ctags
-" set tags=/home/andre/Dev/Repo/Tibra-Onigiri/tags " Onigiri
-" set tags=/home/andre/Dev/Repo/RML-4762/tags " ISE triggeredOrderHitter
-" set tags=/home/andre/Dev/Repo/Test-Bridge/tags " Decorator
-set tags=/home/andre/Dev/Repo/Tibra/tags " Decorator
-
 " GUI
 if has("gui_running")
     set guioptions-=T
     set guioptions-=m
-    "set guifont=Monospace\ Bold\ 09
-    "set guifont=Inconsolata\ for\ Powerline\ Bold\ 09
-    "set guifont=Source\ Code\ Pro\ for\ Powerline\ Semibold\ 09
     set guifont=Ubuntu\ Mono\ for\ Powerline\ Bold\ 10
-    colorscheme wombat
-    " set guifont=Monospace\ Bold\ 16
 endif
+" Other possible fonts
+"set guifont=Monospace\ Bold\ 09
+"set guifont=Inconsolata\ for\ Powerline\ Bold\ 09
+"set guifont=Source\ Code\ Pro\ for\ Powerline\ Semibold\ 09
+"set guifont=Monospace\ Bold\ 16
+
 
 " X11 Clipboard management
 " Look at -> help 'clipboard'
@@ -123,17 +121,23 @@ set autochdir
 set completeopt=menu,preview
 " Limit popup menu height
 set pumheight=15
- 
+
+"""""""""""""""""""""""""""""""""""""""""""
+
 " PLUGIN CONFIGURATION
-"
+
+" Plugins
+
 " ACK - Open quickfix window at the top of the window
 " instead of the bottom
 let g:ack_qhandler="topleft copen"
 let g:ack_lhandler="topleft lopen"
 
-" TAGBAR - Key for opening/closing the tagbar window
-nnoremap <silent> <F9> :TagbarToggle<CR>
-let g:tagbar_width=60
+" Alternate
+" http://www.vim.org/scripts/script.php?script_id=31
+
+" BufExplorer
+" http://www.vim.org/scripts/script.php?script_id=42
 
 " Clang_Complete
 " Disable auto popup, use <Tab> to autocomplete
@@ -145,16 +149,45 @@ let g:clang_use_library=1
 " Clang Complete Configuration
 " let g:clang_close_preview=1
 
+" easymotion
+
+" fugitive
+
+" gitgutter
+
+" nerdtree
+
+" Powerline plugin specific configuration
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+
 " SuperTab
 " Option for context aware completion
 let g:SuperTabDefaultCompletionType = "context"
 "let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
 "let g:SuperTabContextDefaultCompletionType = "<c-x><c-n>"
 
- " ConqueTerm
- " Option to render more quickly by disabling colors
-let g:ConqueTerm_Color = 0
+" Tagbar - Key for opening/closing the tagbar window
+nnoremap <silent> <F9> :TagbarToggle<CR>
+let g:tagbar_width=60
 
-set laststatus=2
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+" Tail
+
+" Tibra
+
+" vim-orgmode
+
+" vim-signify
+
+" z_end
+" Personal plugin to ease the use of supertab with
+" clang_complete
+
+"""""""""""""""""""""""""""""""""""""""""""
+
+" TIBRA Specific tags
+" ctags
+" set tags=/home/andre/Dev/Repo/Tibra-Onigiri/tags " Onigiri
+" set tags=/home/andre/Dev/Repo/RML-4762/tags " ISE triggeredOrderHitter
+" set tags=/home/andre/Dev/Repo/Test-Bridge/tags " Decorator
+set tags=/home/andre/Dev/Repo/Tibra/tags " Decorator

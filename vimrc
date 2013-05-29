@@ -11,6 +11,7 @@ set mouse=a
 set hlsearch
 set ignorecase
 set number
+set autoread " Read automatically the changes of the current file
 set background=dark
 colorscheme wombat
 
@@ -158,8 +159,11 @@ let g:clang_use_library=1
 " nerdtree
 
 " Powerline plugin specific configuration
-set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+let homedir = $HOME
+if isdirectory(homedir . "/.local/lib/python2.7/site-packages/powerline/bindings/vim")
+    set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+    set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
+endif
 
 " SuperTab
 " Option for context aware completion

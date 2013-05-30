@@ -43,6 +43,11 @@ map <F12> :lcd %:h<CR>
 " Paste behavior
 set pastetoggle=<F3>
 
+" Move one line down
+map - ddjP
+" Move one line up
+map _ ddkkp
+
 " To move faster in the files
 " Origin 10jzz and 10kzz
 nnoremap <space> 10j
@@ -194,4 +199,5 @@ let g:tagbar_width=60
 " set tags=/home/andre/Dev/Repo/Tibra-Onigiri/tags " Onigiri
 " set tags=/home/andre/Dev/Repo/RML-4762/tags " ISE triggeredOrderHitter
 " set tags=/home/andre/Dev/Repo/Test-Bridge/tags " Decorator
-set tags=/home/andre/Dev/Repo/Tibra/tags " Decorator
+" set tags=/home/andre/Dev/Repo/Tibra/tags " Decorator
+set tags=/home/andre/Dev/Repo/3.23.0-ArcaMultiMarket/tags

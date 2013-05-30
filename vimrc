@@ -105,7 +105,7 @@ map <silent> <F8> :set foldlevel=99<CR>
 if has("gui_running")
     set guioptions-=T
     set guioptions-=m
-    set guifont=Ubuntu\ Mono\ for\ Powerline\ Bold\ 10
+    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ Bold\ 10
 endif
 " Other possible fonts
 "set guifont=Monospace\ Bold\ 09

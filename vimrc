@@ -5,7 +5,6 @@ call pathogen#infect()
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-
 " Global Configuration
 set mouse=a
 set hlsearch
@@ -29,7 +28,10 @@ set noswapfile
 set wildmenu
 set laststatus=2
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Key Mapping
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " Leader Key
 let mapleader=","
 " F1 is annoying
@@ -42,21 +44,22 @@ map <F11> :nohlsearch<CR>
 map <F12> :lcd %:h<CR>
 " Paste behavior
 set pastetoggle=<F3>
-
 " Move one line down
 map - ddjP
 " Move one line up
 map _ ddkkp
-
 " To move faster in the files
 " Origin 10jzz and 10kzz
 nnoremap <space> 10j
 nnoremap <backspace> 10k
+"Goodbye Ex mode - CommandLine mode is enough
+nnoremap Q <nop>
 
 " Dev configuration
 " Tibra recommandations
-set autoindent "auto-indent code
-set smartindent
+" set autoindent "auto-indent code
+"set smartindent
+set cindent
 set expandtab
 set shiftwidth=4
 set tabstop=4
@@ -74,6 +77,11 @@ set listchars=tab:>.,trail:.,extends:#,nbsp:.
 " List of path
 " In Tibra, going to .. is enough
 set path +=..
+set path +=../..
+set path +=../../..
+set path +=../../../..
+set path +=../../../../..
+set path +=../../../../../..
 
 " additional file extensions for syntax highlighting
 syntax on
@@ -128,6 +136,9 @@ set completeopt=menu,preview
 " Limit popup menu height
 set pumheight=15
 
+" New C++ Keyword
+syn keyword nullptr contained
+
 """""""""""""""""""""""""""""""""""""""""""
 
 " PLUGIN CONFIGURATION
@@ -158,8 +169,6 @@ let g:clang_use_library=1
 " easymotion
 
 " fugitive
-
-" gitgutter
 
 " nerdtree
 
@@ -200,4 +209,14 @@ let g:tagbar_width=60
 " set tags=/home/andre/Dev/Repo/RML-4762/tags " ISE triggeredOrderHitter
 " set tags=/home/andre/Dev/Repo/Test-Bridge/tags " Decorator
 " set tags=/home/andre/Dev/Repo/Tibra/tags " Decorator
-set tags=/home/andre/Dev/Repo/3.23.0-ArcaMultiMarket/tags
+" set tags=/home/andre/Dev/Repo/3.23.0-ArcaMultiMarket/tags
+" set tags=/home/andre/Dev/Repo/3.23.0-RML-4978/tags
+" set tags=/home/andre/Dev/Repo/RML-4762-Review/tags " ISE triggeredOrderHitter Review
+" set tags=/home/andre/Dev/Repo/RML-4991/tags
+" set tags=/home/andre/Dev/Repo/RFX-4891/tags
+" set tags=/home/andre/Dev/Repo/3.25.0/tags
+" set tags=/home/andre/Dev/Repo/3.25.0-RFX-4827/tags
+set tags=/home/andre/Dev/Repo/Trunk/tags
+" set tags=/home/andre/Dev/Repo/hf/tags
+" set tags=/home/andre/Dev/Repo/hf-cboe/tags
+" set tags=/home/andre/Dev/Repo/3.24.0-Commodities/tags

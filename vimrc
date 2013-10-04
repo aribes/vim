@@ -156,16 +156,6 @@ let g:ack_lhandler="topleft lopen"
 " BufExplorer
 " http://www.vim.org/scripts/script.php?script_id=42
 
-" Clang_Complete
-" Disable auto popup, use <Tab> to autocomplete
-let g:clang_complete_auto=0
-" Don't show clang errors in the quickfix window
-let g:clang_complete_copen=0
-" Use clang library
-let g:clang_use_library=1
-" Clang Complete Configuration
-" let g:clang_close_preview=1
-
 " easymotion
 
 " fugitive
@@ -179,12 +169,6 @@ if isdirectory(homedir . "/.local/lib/python2.7/site-packages/powerline/bindings
     set rtp+=~/.local/lib/python2.7/site-packages/powerline/bindings/vim
 endif
 
-" SuperTab
-" Option for context aware completion
-let g:SuperTabDefaultCompletionType = "context"
-"let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
-"let g:SuperTabContextDefaultCompletionType = "<c-x><c-n>"
-
 " Tagbar - Key for opening/closing the tagbar window
 nnoremap <silent> <F9> :TagbarToggle<CR>
 let g:tagbar_width=60
@@ -193,13 +177,36 @@ let g:tagbar_width=60
 
 " Tibra
 
+" vim-indent-guides
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_enable_on_vim_startup = 1
+
 " vim-orgmode
 
 " vim-signify
 
-" z_end
-" Personal plugin to ease the use of supertab with
-" clang_complete
+" vim-startify
+
+let g:startify_custom_header = [
+    \ '     ________ ++     ________    ',
+    \ '    /VVVVVVVV\++++  /VVVVVVVV\   ',
+    \ '    \VVVVVVVV/++++++\VVVVVVVV/   ',
+    \ '     |VVVVVV|++++++++/VVVVV/''   ',
+    \ '     |VVVVVV|++++++/VVVVV/''     ',
+    \ '    +|VVVVVV|++++/VVVVV/''+      ',
+    \ '  +++|VVVVVV|++/VVVVV/''+++++    ',
+    \ '+++++|VVVVVV|/VVVVV/''+++++++++  ',
+    \ '  +++|VVVVVVVVVVV/''+++++++++    ',
+    \ '    +|VVVVVVVVV/''+++++++++      ',
+    \ '     |VVVVVVV/''+++++++++        ',
+    \ '     |VVVVV/''+++++++++          ',
+    \ '     |VVV/''+++++++++            ',
+    \ '     ''V/''   ++++++             ',
+    \ '              ++                 ',
+    \ '',
+    \ '',
+    \ ]
 
 """""""""""""""""""""""""""""""""""""""""""
 

@@ -186,6 +186,13 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 " vim-signify
 
+" Syntastic
+let g:syntastic_auto_loc_list=1
+
+" YouCompleteMe
+" Do not ask for loading the configuration file
+let g:ycm_confirm_extra_conf = 0
+
 " vim-startify
 
 let g:startify_custom_header = [

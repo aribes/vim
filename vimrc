@@ -58,12 +58,12 @@ nnoremap Q <nop>
 " Dev configuration
 " Tibra recommandations
 " set autoindent "auto-indent code
-"set smartindent
-set cindent
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set tabstop=4
 set autowrite
+set smartindent
+set cindent
 " My recommandations :-)
 set ls=2
 
@@ -132,7 +132,7 @@ set autochdir
 
 " Vim completion
 " Complete options (disable preview scratch window)
-set completeopt=menu,preview
+set completeopt=menu ",preview
 " Limit popup menu height
 set pumheight=15
 
@@ -187,7 +187,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 " vim-signify
 
 " Syntastic
-let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=0
 
 " YouCompleteMe
 " Do not ask for loading the configuration file

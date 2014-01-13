@@ -59,7 +59,7 @@ nnoremap Q <nop>
 " Tibra recommandations
 " set autoindent "auto-indent code
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 set tabstop=4
 set autowrite
 set smartindent
@@ -230,7 +230,8 @@ let g:startify_custom_header = [
 " set tags=/home/andre/Dev/Repo/RFX-4891/tags
 " set tags=/home/andre/Dev/Repo/3.25.0/tags
 " set tags=/home/andre/Dev/Repo/3.25.0-RFX-4827/tags
-set tags=/home/andre/Dev/Repo/Trunk/tags
+" set tags=/home/andre/Dev/Repo/Trunk/tags
+set tags=/home/andre/Dev/Repo/Trunk-PGS-Mercury-Milestone-3/tags
 " set tags=/home/andre/Dev/Repo/hf/tags
 " set tags=/home/andre/Dev/Repo/hf-cboe/tags
 " set tags=/home/andre/Dev/Repo/3.24.0-Commodities/tags

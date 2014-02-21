@@ -8,11 +8,13 @@ call pathogen#helptags()
 " Global Configuration
 set mouse=a
 set hlsearch
-set ignorecase
 set number
-set autoread " Read automatically the changes of the current file
-set background=dark
-colorscheme wombat
+set background=dark " enable for dark terminals
+colorscheme wombat  " set the colorscheme
+
+set cursorline " highlights the current line
+set showmatch  " show matching bracket (briefly jump)
+set scrolloff=2 " 2 lines above/below cursor when scrolling
 
 " Add full file path to your existing statusline
 " This statusline is currently not used
@@ -23,7 +25,6 @@ colorscheme wombat
 set nofsync
 set swapsync=
 set nocompatible
-set nobackup
 set noswapfile
 set wildmenu
 set laststatus=2
@@ -55,20 +56,42 @@ nnoremap <backspace> 10k
 "Goodbye Ex mode - CommandLine mode is enough
 nnoremap Q <nop>
 
-" Dev configuration
-" Tibra recommandations
-" set autoindent "auto-indent code
-set expandtab
-set shiftwidth=4
-set tabstop=4
-set autowrite
-set smartindent
-set cindent
-" My recommandations :-)
-set ls=2
 
-" completion behaviour
-set wildmode=longest:full,full
+
+
+" Dev configuration
+" -----------------
+set ignorecase " case insensitive searching
+set smartcase  " but become case sensitive if you type uppercase characters
+
+" this can cause problems with other filetypes
+" see comment on this SO question http://stackoverflow.com/questions/234564/tab-key-4-spaces-and-auto-indent-after-curly-braces-in-vim/234578#234578
+"set smartindent " smart auto indenting
+set autoindent              " on new lines, match indent of previous line
+set copyindent              " copy the previous indentation on autoindenting
+set cindent                 " smart indenting for c-like code
+set cino=b1,g0,N-s,t0,(0,W4 " see :h cinoptions-valuesa
+
+set smarttab            " smart tab handling for indenting
+set magic               " change the way backslashes are used in search patterns
+set bs=indent,eol,start " Allow backspacing over everything in insert mode
+set nobackup            " no backup~ files.
+
+set tabstop=4       " number of spaces a tab counts for
+set shiftwidth=2    " spaces for autoindents
+set softtabstop=2
+set shiftround      " makes indenting a multiple of shiftwidth
+set expandtab       " turn a tab into spaces
+
+
+
+set autoread    " Read automatically the changes of the current file
+
+" When you type the first tab, it will complete as much as possible, the second
+" tab hit will provide a list, the third and subsequent tabs will cycle through
+" completion options so you can complete the file without further keys
+set wildmode=longest,list,full
+set wildmenu
 
 " A Good way to see spaces
 set list
@@ -230,8 +253,8 @@ let g:startify_custom_header = [
 " set tags=/home/andre/Dev/Repo/RFX-4891/tags
 " set tags=/home/andre/Dev/Repo/3.25.0/tags
 " set tags=/home/andre/Dev/Repo/3.25.0-RFX-4827/tags
-" set tags=/home/andre/Dev/Repo/Trunk/tags
-set tags=/home/andre/Dev/Repo/Trunk-PGS-Mercury-Milestone-3/tags
+set tags=/home/andre/Dev/Repo/Trunk/tags
+" set tags=/home/andre/Dev/Repo/Trunk-PGS-Mercury-Milestone-3/tags
 " set tags=/home/andre/Dev/Repo/hf/tags
 " set tags=/home/andre/Dev/Repo/hf-cboe/tags
 " set tags=/home/andre/Dev/Repo/3.24.0-Commodities/tags
